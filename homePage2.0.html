@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portfolio 2.0</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="tailwind.config.js"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden leading-8 dark:bg-darkTheme dark:text-white">
+
+   <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+      <img src="homePagesrc/images/header-bg-color.png" alt="Header Color" class="w-full">
+   </div>
+
+   <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <img src="homePagesrc/personalLogo.png" alt="Light Logo" class="w-28 cursor-pointer mr-14 dark:hidden">
+
+      <img src="homePagesrc/personalLogodark.png" alt="Dark Logo" class="w-28 cursor-pointer mr-14 hidden dark:block">
+
+      <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 
+      dark:border dark:border-white/50 dark:bg-transparent">
+         <li><a href="#top">Home</a></li>
+         <li><a href="#about">About Me</a></li>
+         <li><a href="#services">Services</a></li>
+         <li><a href="#work">My Work</a></li>
+         <li><a href="#contact">Contact Me</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+         <button onclick="toggleTheme()">
+            <img src="homePagesrc/images/moon_icon.png" alt="Moon Icon" class="w-6 dark:hidden">
+            <img src="homePagesrc/images/sun_icon.png" alt="Sun Icon" class="w-6 hidden dark:block">
+         </button>
+
+         <a href="#contact" 
+         class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4  dark:border-white/50">
+         Contact 
+         <img src="homePagesrc/images/arrow-icon.png" alt="Light Arrow Icon" class="w-3 dark:hidden">
+         <img src="homePagesrc/images/arrow-icon-dark.png" alt="Dark Arrow Icon" class="w-3 hidden dark:block">
+      </a>
+
+         <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="homePagesrc/images/menu-black.png" alt="White Menu Black" class="w-6 cursor-pointer dark:hidden">
+            <img src="homePagesrc/images/menu-white.png" alt="Dark Menu Black" class="w-6 cursor-pointer hidden dark:block">
+         </button>
+
+      </div>
+
+<!----- mobile menu ----->
+
+      <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500  dark:bg-darkHover dark:text-white">
+         
+         <div class="absolute right-6 top-6" onclick="closeMenu()">
+            <img src="homePagesrc/images/close-black.png" alt="Close X Black" class="w-5 cursor-pointer dark:hidden">
+            <img src="homePagesrc/images/close-white.png" alt="Close X White" class="w-5 cursor-pointer hidden dark:block">
+         </div>
+
+         <li><a href="#top" onclick="closeMenu()">Home</a></li>
+         <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+         <li><a href="#services" onclick="closeMenu()">Services</a></li>
+         <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+         <li><a href="#contact" onclick="closeMenu()">Contact Me</a></li>
+      </ul>
+
+   </nav>
+
+   <!-- Header -->
+
+
+   <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+      <img src="homePagesrc/IMG_3251.jpeg" alt="Profile Image" class="rounded-full w-32">
+      <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 ">Hi! I am Jessey Salazar,</h3>
+      <h1 class="text-3xl sm:text-6xl lg:text-[66px] ">Upper Text</h1>
+      <p class="max-w-2xl mx-auto ">Here is more text but in a paragraph form</p>
+
+   
+         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
+               Contact Me<img src="homePagesrc/images/right-arrow-white.png" alt="White Arrow White" class="w-4"></a>
+
+            <a href="homePagesrc/Jessey_Salazar_Resume copy.pdf" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">
+               My Resume<img src="homePagesrc/images/download-icon.png" alt="download icon png" class="w-4"></a>
+         </div>
+   </div>
+
+   <!----- About me ---->
+
+   <div id="about" class="w-full px-[12%] py-10 scroll-mt-40">
+      <h4 class="text-center mb-2 text-lg ">Introduction</h4>
+      <h2 class="text-center text-5xl ">About Me</h2>
+
+      <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+         <div class="max-w-max mx-auto relative"> 
+            <img src="homePagesrc/imageofme.jpeg" alt="Image of Me" class="w-64 sm:w-80 rounded-3xl max-w-none"> 
+            <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow[0_4px_55px_rgba(149,0,162,0,.15)] flex items-center justify-center">
+               <img src="homePagesrc/images/circular-text.png" alt="Circular Text" class="w-full animate-spin_slow">
+            </div>
+         </div>
+         <div class="flex-1">
+               <p class="mb-10 max-w-2xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quos autem ipsam dignissimos laboriosam, iusto dolorem magni quod delectus perferendis quisquam aliquid sunt exercitationem consectetur, explicabo vitae eaque tempore recusandae.</p>
+               <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                  <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                     <img src="homePagesrc/images/code-icon.png" alt="light code icon" class="w-7 mt-3 dark:hidden">
+                     <img src="homePagesrc/images/code-icon-dark.png" alt="dark code icon" class="w-7 mt-3 hidden dark:block">
+                     <h3 class="my-4 font-semibold text-gray-700 dark:text-white/80">Languages</h3>
+                     <p class="text-gray-600 text-sm dark:text-white/80">HTML, CSS, JavaScript, React, JS</p>
+                  </li>
+                  <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                     <img src="homePagesrc/images/edu-icon.png" alt="light edu icon" class="w-7 mt- dark:hidden">
+                     <img src="homePagesrc/images/edu-icon-dark.png" alt="dark edu icon" class="w-7 mt-3 hidden dark:block">
+                     <h3 class="my-4 font-semibold text-gray-700 dark:text-white/80">Education</h3>
+                     <p class="text-gray-600 text-sm dark:text-white/80">HTML, CSS, JavaScript, React, JS</p>
+                  </li>
+                  <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                     <img src="homePagesrc/images/project-icon.png" alt="light project icon" class="w-7 mt-3 dark:hidden">
+                     <img src="homePagesrc/images/project-icon-dark.png" alt="dark project icon" class="w-7 mt-3 hidden dark:block">
+                     <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Project</h3>
+                     <p class="text-gray-600 text-sm dark:text-white/80">HTML, CSS, JavaScript, React, JS</p>
+                  </li>
+               </ul>
+
+               <h4 class="my-6 text-gray-700  dark:text-white/80">Tools I Use</h4>
+
+               <ul class="flex items-center gap-3 sm:gap-5">
+                  <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                     <img src="homePagesrc/images/vscode.png" alt="VS Coding" class="w-5 sm:w-7">
+                  </li>
+                  <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                     <img src="#" alt="ICON 2" class="w-5 sm:w-7">
+                  </li>
+                  <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                     <img src="#" alt="ICON 3" class="w-5 sm:w-7">
+                  </li>
+                  <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                     <img src="#" alt="ICON 44" class="w-5 sm:w-7">
+                  </li>
+                  <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                     <img src="#" alt="ICON 5" class="w-5 sm:w-7">
+                  </li>
+               </ul>
+         </div>
+      </div>
+    </div>
+
+   </div>
+
+
+   <!--- services -->
+
+
+   <div id="services" class="w-full px-[12%] py-10 scroll-mt-40">
+      <h4 class="text-center mb-2 text-lg ">What I Offer</h4>
+      <h2 class="text-center text-5xl ">My Services</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="grid grid-cols-auto gap-6 my-10" style="padding-bottom: 12rem;">
+         <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="#" alt="Web Design" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="flex items-center gap-2 text-sm mt-5">Read More
+               <img src="homePagesrc/images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+               <img src="homePagesrc/images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block"></a>
+         </div>
+         <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="#" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="flex items-center gap-2 text-sm mt-5">Read More 
+               <img src="homePagesrc/images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+               <img src="homePagesrc/images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block"></a>
+         </div>
+         <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="#" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white"">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="flex items-center gap-2 text-sm mt-5">Read More 
+               <img src="homePagesrc/images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+               <img src="homePagesrc/images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block"></a>
+         </div>
+         <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="#" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="flex items-center gap-2 text-sm mt-5">Read More 
+               <img src="homePagesrc/images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+               <img src="homePagesrc/images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block"></a>
+         </div>
+      </div>
+   </div>
+
+
+   <!--- My work -->
+
+
+   <div id="work" class="w-full px-[12%] py-10 scroll-mt-40">
+      <h4 class="text-center mb-2 text-lg ">My Portfolio</h4>
+      <h2 class="text-center text-5xl ">My Latest Work</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+         <div class="aspect-square bg-[url(#)] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <div class="bg-rose-50 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+               <div>
+                  <h2 class=" font-semibold">Frontend Project</h2>
+                  <p class=" text-sm text-gray-700">Web Design</p>
+               </div>
+               <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                  <img src="homePagesrc/images/send-icon.png" alt="Image" class="w-5">
+               </div>
+
+            </div>
+
+         </div>
+         <div class="aspect-square bg-[url(#)] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <div class="bg-rose-50 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+               <div>
+                  <h2 class=" font-semibold">Frontend Project</h2>
+                  <p class=" text-sm text-gray-700">Web Design</p>
+               </div>
+               <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                  <img src="homePagesrc/images/send-icon.png" alt="Image" class="w-5">
+               </div>
+
+            </div>
+
+         </div>
+         <div class="aspect-square bg-[url(#)] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <div class="bg-rose-50 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+               <div>
+                  <h2 class=" font-semibold">Frontend Project</h2>
+                  <p class=" text-sm text-gray-700">Web Design</p>
+               </div>
+               <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                  <img src="homePagesrc/images/send-icon.png" alt="Image" class="w-5">
+               </div>
+
+            </div>
+
+         </div>
+         <div class="aspect-square bg-[url(#)] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <div class="bg-rose-50 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+               <div>
+                  <h2 class=" font-semibold">Frontend Project</h2>
+                  <p class=" text-sm text-gray-700">Web Design</p>
+               </div>
+               <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                  <img src="homePagesrc/images/send-icon.png" alt="Image" class="w-5">
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+      <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">Show More
+         <img src="homePagesrc/images/right-arrow-bold.png" alt="right arrow" class="w-4 dark:hidden">
+         <img src="homePagesrc/images/right-arrow-dark.png" alt="dark right arrow" class="w-4 hidden dark:block">
+      </a>
+
+   </div>
+
+   <!--- contact --->
+
+   <div id=contact class="w-full px-[12%] py-10 scroll-mt-40 bg-[url(#)] bg-no-repeat bg-[lenght:90%_auto] bg-center dark:bg-none">
+      <h4 class="text-center mb-2 text-lg ">Connect With Me</h4>
+      <h2 class="text-center text-5xl ">Get In Touch</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+   <div>
+
+      <form method="POST" id="form" class="max-w-2xl mx-auto">
+
+         <input type="hidden" name="access_key" value="da6a5bb3-ec62-42ba-9bad-aacbd9a6bfb2">
+         <input type="hidden" name="subject" value="Someone wants to Connect with you - New Submission from Personal Portfolio">
+         <input type="checkbox" name="botcheck" id="" style="display: none;">
+         
+
+
+         <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter Name Here" 
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="Name"/> 
+            <input type="email" placeholder="Enter Email Here" 
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="Email"/> 
+         </div>
+         <textarea rows="6" placeholder="Enter Message Here" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required name="Message"></textarea>
+         <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover ">Submit Now
+            <img src="homePagesrc/images/right-arrow-white.png" alt="white arrow" class="w-4">
+         </button>
+
+         <div id="result"></div>
+
+      </form>
+      
+      <div id="successMessage" style="display: none;" class="grid grid-cols-auto gap-6 mt-10 mb-8">
+         <div class="flex justify-center bg-white dark:bg-transparent">
+            <div class="flex flex-col items-center justify-center text-center rounded-md outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 p-7"><svg width="100" height="100"
+                  class="text-green-500 dark:text-green-300" viewBox="0 0 100 100" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M26.6666 50L46.6666 66.6667L73.3333 33.3333M50 96.6667C43.8716 96.6667 37.8033 95.4596 32.1414 93.1144C26.4796 90.7692 21.3351 87.3317 17.0017 82.9983C12.6683 78.6649 9.23082 73.5204 6.8856 67.8586C4.54038 62.1967 3.33331 56.1283 3.33331 50C3.33331 43.8716 4.54038 37.8033 6.8856 32.1414C9.23082 26.4796 12.6683 21.3351 17.0017 17.0017C21.3351 12.6683 26.4796 9.23084 32.1414 6.88562C37.8033 4.5404 43.8716 3.33333 50 3.33333C62.3767 3.33333 74.2466 8.24998 82.9983 17.0017C91.75 25.7534 96.6666 37.6232 96.6666 50C96.6666 62.3768 91.75 74.2466 82.9983 82.9983C74.2466 91.75 62.3767 96.6667 50 96.6667Z"
+                     stroke="currentColor" stroke-width="3"></path>
+               </svg>
+               <h3 class="text-2xl text-green-500 dark:text-green-300 pt-7 ">Your form was submitted successfully!</h3>
+               <p class="max-w-md pt-3 text-gray-500 dark:text-gray-300 md:px-3 ">Thank you for reaching out!<br>Jessey will get in contact with you soon!</p>
+               <div class="text-center" id="submitNewResponse" ><button
+                     class="mt-5 text-indigo-500 hover:underline dark:text-white focus:outline-none ">Submit again</button></div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   </div>
+
+   <!--- footer -->
+
+   <div class="mt-30">
+      <div class="text-center 
+      w-full px-[12%] py-10 scroll-mt-40 bg-[url(#)] bg-no-repeat bg-[lenght:90%_auto] bg-center dark:bg-none">
+      
+         <img src="homePagesrc/personalLogo.png" alt="Light Footer Logo" class="w-36 mx-auto mb-2 dark:hidden">
+         <img src="homePagesrc/personalLogodark.png" alt="Dark Footer Logo" class="w-36 mx-auto mb-2 hidden dark:block">
+
+         <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="homePagesrc/images/mail_icon.png" alt="Light Email Logo" class="w-6 dark:hidden">
+            <img src="homePagesrc/images/mail_icon_dark.png" alt="Dark Email Logo" class="w-6 hidden dark:block">
+            <a href="mailto:jesseysalazar@gmail.com">Click to Email</a>
+
+         </div>
+      </div>
+      <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+         
+         <div>
+            <h3 style="font-weight: bold;">Web Directory</h3>
+               <ul class="flex items-center gap-5 justify-center">
+                  <li><a href="#top">Home</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#contact">Contact Me</a></li>
+               </ul>
+         </div>
+         <div>
+            <h3 style="font-weight: bold;">Social Media Links</h3>
+               <ul class="flex items-center gap-5 justify-center">
+                  <li><a href="https://github.com/J-Sal-Design" target="_blank">GitHub</a></li>
+                  <li><a href="https://www.linkedin.com/in/j-sal/" target="_blank">LinkedIn</a></li>
+                  <li><a href="mailto:jesseysalazar@gmail.com">Email Me</a></li>
+               </ul>
+         </div>
+      </div>
+      <div>
+         <p class="text-center" style="opacity: .5;">
+            2025© - Zalor Labs™ - by Jessey Salazar. All rights reserved.
+         </p>
+      </div>
+   </div>
+
+   <script src="script.js"></script>
+   <script src="emailform.js"></script>
+
+   
+</body>
+</html>
