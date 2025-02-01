@@ -1,0 +1,116 @@
+/* Portfolio Section */
+.portfolio {
+   padding: 6rem 2rem;
+   text-align: center;
+   grid-column: auto;
+ }
+ 
+ .portfolio h2 {
+   color: #2D2D2D;
+   font-size: 3rem;
+   margin-bottom: 2rem;
+   font-weight: 600;
+ }
+ 
+ .portfolio-cards {
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+   flex-wrap: wrap;
+ }
+ 
+ .portfolio-cards .card {
+   background-color: rgb(255 241 242);
+   padding: 2rem;
+   width: 300px;
+   border-radius: 10px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+ }
+
+ .card:hover{
+   background: rgb(164, 189, 225);
+   font-weight: bold;
+ }
+ 
+ .portfolio-cards .card:hover {
+   transform: translateY(-20px);
+   transform: translateX(-8px);
+ }
+ .portfolio-cards .card:hover h3 h5{
+   color: #333;
+ }
+ 
+ .portfolio-cards .card img {
+   max-width: 100%;
+   border-radius: 10px;
+ }
+ 
+ .portfolio-cards .card h3 {
+   color: #000000;
+   margin-top: .5rem;
+   font-size: 1.3rem;
+ }
+
+ h5 {
+   font-size: 1rem;
+   color: #333;
+ }
+
+ /* Floating Text */
+
+ body.container {
+   color: #333;
+   margin: 0;
+   padding: 0;
+ }
+
+ .container {
+   display: flex;
+   align-items: center;
+   height: 20vh;
+   text-align: center;
+   font-family: sans-serif;
+   width: 100%;
+ }
+
+ .scroll {
+   white-space: nowrap;
+   margin: 0.2em;
+ }
+
+ .scroll div {
+   display: flex;
+   gap: 2em;
+ }
+
+ .scroll p {
+   font-size: 5em;
+   color: #333;
+   font-weight: bold;
+   margin-bottom: 0;
+   line-height: 10px;
+   opacity: .8;
+ }
+
+ .RightToLeft {
+   animation: RightToLeft 20s infinite linear;
+ }
+
+ @keyframes RightToLeft {
+   from{
+      transform: translateX(-5%);
+   }
+   to {
+      transform: translateX(-40%);
+   }
+ }
+
+ .circle-moving-text {
+   background-color: #333;
+   border-radius: 50%;
+   flex: none;
+   width: 18px;
+   height: 18px;
+   opacity: .8;
+   }
