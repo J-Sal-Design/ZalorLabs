@@ -59,11 +59,12 @@
 
  /* Floating Text */
 
- body.container {
-   color: #333;
+ .bodytext {
+   overflow: hidden; 
+   text-transform: uppercase;
    margin: 0;
    padding: 0;
-   
+   animation: infinite linear;
  }
 
  .container {
@@ -73,7 +74,6 @@
    text-align: center;
    font-family: sans-serif;
    width: 100%;
-   overflow:-moz-hidden-unscrollable; 
  }
 
  .scroll {
@@ -88,16 +88,24 @@
 
  .scroll p {
    font-size: 5em;
-   color: #333;
    font-weight: bold;
    margin-bottom: 0;
    line-height: 10px;
-   opacity: .8;
+   opacity: .7;
  }
 
  .RightToLeft {
-   animation: RightToLeft 20s infinite linear;
+   animation: RightToLeft 45s infinite linear;
  }
+
+ .circle-moving-text {
+   background-color: #333;
+   border-radius: 30%;
+   flex: none;
+   width: 20px;
+   height: 18px;
+   opacity: .8;
+   }
 
  @keyframes RightToLeft {
    from{
@@ -108,11 +116,3 @@
    }
  }
 
- .circle-moving-text {
-   background-color: #333;
-   border-radius: 50%;
-   flex: none;
-   width: 18px;
-   height: 18px;
-   opacity: .8;
-   }
