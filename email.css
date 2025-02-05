@@ -29,8 +29,9 @@
  }
 
  .card:hover{
-   background: rgb(164, 189, 225);
+   background-color: rgb(252, 230, 232);
    font-weight: bold;
+   border: #333 solid .5px;
  }
  
  .portfolio-cards .card:hover {
